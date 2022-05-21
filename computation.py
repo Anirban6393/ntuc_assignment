@@ -4,7 +4,6 @@ import os
 
 directory =os.chdir((os.getcwd()+'\\data'))
 
-
 def FileAppend(dr):
     filenames = os.listdir(dr)
     filenames=[file for file in filenames if file.endswith('.csv')]
@@ -14,17 +13,19 @@ def FileAppend(dr):
 
 customers = FileAppend(directory)
 
-import sqlite3
-connection = sqlite3.connect('bank_info.db')
 
 os.chdir("..")
 
+from transfomer.data_ingestion import *
 
+db_name='bank_info.db'
+
+os.chdir(".\sql")
+execute_external_sql_script_file('create_table.sql',db_name)
+
+os.chdir("..")
 print('Display Marital Status by Jobs')
 print(pd.crosstab(customers.job, customers.marital,normalize='index')*100)
-
-
-
 
 customers['university_degree']=customers['education'].apply(lambda x: 'Yes' if x=='tertiary' else 'No')
 
@@ -37,13 +38,8 @@ fig2.show()
 
 
 
-
-
 if not os.path.exists("images"):
     os.mkdir("images")
 
 fig1.write_image("images/Age Histogram Unfiltered.png")
 fig2.write_image("images/Age Histogram Based On University Degree.png")
-    
-    
-    
