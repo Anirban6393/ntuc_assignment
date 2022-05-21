@@ -5,7 +5,7 @@
 
 **Data** - Stores Zipped files and unzipped files extracted
 
-**Note**
+**Note**<br />
 The python scripts will switch between main outer folder, Images and Data Folder when neccessary using python OS module
 to perform required tasks.
 
