@@ -1,0 +1,39 @@
+Question 5:
+AWS redshift or Azure SQL Database are cloudbased datawarehouses that allow you to view historical and current data, write complex analytical queries to manipulate data answering business concerns.
+Why cloud? This is to avoid infrastructure maintenance headache as well as ease of scalability 
+for ever growing data on various services and products. Assume star schema consisting of central fact table and supporting dimension tables.
+Fact table showing datetime, customerid, product id, product category, customer clicks and ratings.
+Dimension tables: time (year, month, week),department(department id, department name), product (product id, product category, department id referencing department table), customer (customer id, customer name, age, income, education, job, product id referencing product table).
+
+Make sure reliable automatic ETL pipeline set up involving AWS glue or Azue Datafactory where you need to map data sources to target datawarehouse tables, specify job trigger schedule.
+Some central datalake used to land store data from various sources as it is before being transformed and ingested to datawarehouse repository for business analytics and reporting.
+
+
+Question 6:
+Data required are datetime, business units for FP, categories of products falling under those business units,  user click frequencies and user ratings. Aggregation based on frequecies and average/max rating segregated by month, business unit, product categories.
+
+
+
+Question 7:
+I will create a python based interactive visualisation dashboard
+using dash and plotly libraries that provide APIs.
+Compared to PowerBI or Tableau, dash has lower latency.
+Plotly has heatmap kind of visualisations.
+Need to specify table and columns you need to connect to when writing SQL queries
+in python script using sqlalchemy library to fetch relevant data for visualisation.
+You can create docker container with defined python image, required sql and python scripts.
+Don't forget to specify volume in order to save container specific persisted data.
+
+
+Question 8:
+Split data randomly into training (80%) and unseen test dataset(20%).
+
+Need to visualise the confusion matrix that shows count distribution of
+true positives, true negatives, false positives and false negatives.
+
+Important metric is F1 score that is mean harmonic of recall and precision.
+Precision (also called positive predictive value) is the fraction of relevant instances among the retrieved instances, while recall (also known as sensitivity) is the fraction of relevant instances that were retrieved. 
+
+
+Question 9:
+This method involves splitting the multi-class dataset into multiple binary classification problems. Therefore 7 models required.

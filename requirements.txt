@@ -1,0 +1,8 @@
+kaleido-0.2.1
+numpy
+pandas 
+plotly
+sqlite3
+zipfile36
+wget
+kaleido
