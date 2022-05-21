@@ -12,8 +12,21 @@ It tells us overall requirements for this assignment for both coding section and
 The python scripts will switch between main outer folder, Images and Data Folder when neccessary using python OS module
 to perform required tasks.
 
-# Scripts
-download_files.py - Used for extracting zip files from website and unzipping them in **Data** folder. User need to specify website name and files.
+# SQL Scripts
+There are separate sql scripts for creating and deleting tables that is called by computation.py script
+
+# Transformer Module Scripts
+**download.py:** <br />
+It contains functions for extracting zip files from website and unzipping them in **Data** folder.
+
+**data_ingestion.py:**<br />
+This file detects all csv files in data directory and ingests them into a pandas dataframe and also has functions for connecting to a database,
+creating and deleting tables from external sql script instead of having to hardcode sql commands in string within file itself.
+
+
+# Main Running Scripts
+download_files.py - Used for extracting zip files from website and unzipping them in **Data** folder. It invokes ```download.py```
+script from ```transformer``` module. User need to specify website name and files.
 
 ```
 python download_files.py
@@ -34,6 +47,8 @@ bank-additional.zip,bank.zip
 
 ### Computation
 computation.py - processing logic for querying data and data visualisation. <br />
+This script invokes ```data_ingestion.py``` from transformer module for creating tables via DDL statements and ingesting all detected csv files
+into pandas dataframe called customers that will be inserted into a sqlite table.
 
 It saves plotly image too in **Images** folder. <br />
 It will also display a table that shows percentage breakdown of people for each occupation.
