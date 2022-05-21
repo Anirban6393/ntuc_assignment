@@ -2,6 +2,7 @@
 
 # Folders
 Images -  Stores histogram images
+
 Data - Stores Zipped files and unzipped files extracted
 
 # Scripts
