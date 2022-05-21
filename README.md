@@ -19,7 +19,8 @@ download_files.py - Used for extracting zip files from website and unzipping the
 python download_files.py
 ```
 
-### Example of website as unit test
+### Example of website as unit test<br /> 
+User to provide website name where file to be downloaded from.
 ```
 https://archive.ics.uci.edu/ml/machine-learning-databases/00222/
 ```
@@ -32,6 +33,7 @@ bank-additional.zip, bank.zip
 ```
 
 computation.py - processing logic for querying data and data visualisation. <br />
+
 It saves plotly image too in **Images** folder. <br />
 It will also display a table that shows percentage breakdown of people for each occupation.
 
