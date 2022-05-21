@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
+import plotly.express as px
 
 directory =os.chdir((os.getcwd()+'\\data'))
 
@@ -30,7 +31,6 @@ print(pd.crosstab(customers.job, customers.marital,normalize='index')*100)
 customers['university_degree']=customers['education'].apply(lambda x: 'Yes' if x=='tertiary' else 'No')
 
 
-import plotly.express as px
 fig1 = px.histogram(customers, x="age",title='Age Histogram Unfiltered')
 fig2 = px.histogram(customers, x="age", color="university_degree",title='Age Histogram Based On University Degree')
 fig1.show()
