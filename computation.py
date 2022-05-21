@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 import plotly.express as px
+from transfomer.data_ingestion import *
 
 directory =os.chdir((os.getcwd()+'\\data'))
 
@@ -17,7 +18,7 @@ customers = FileAppend(directory)
 
 os.chdir("..")
 
-from transfomer.data_ingestion import *
+
 
 db_name='bank_info.db'
 
