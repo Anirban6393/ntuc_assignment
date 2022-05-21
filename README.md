@@ -23,7 +23,10 @@ python download_files.py
 ```
 https://archive.ics.uci.edu/ml/machine-learning-databases/00222/
 ```
-### Example of files as unit test
+### Example of files as unit test<br /> 
+This user arguement advices user to provide multiple file names in a website which will be stored in a list
+for iterating and unzipping.
+
 ```
 bank-additional.zip, bank.zip
 ```
