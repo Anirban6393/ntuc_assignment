@@ -1,5 +1,7 @@
 import os
-from transfomer.download import *
+from transfomer.data_ingestion import *
+
+os.chdir((os.getcwd()+'\\data'))
 
 
 if __name__ == "__main__":
