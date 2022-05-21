@@ -1,4 +1,4 @@
-# ntuc_assignment
+# NTUC_Assignment
 
 # Folders
 **Images** -  Stores histogram images
