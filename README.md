@@ -33,8 +33,11 @@ It saves plotly image too in **Images** folder.
 
 
 ## Requirements File
-It shows various importable python modules needed to download.
-
+The following command will install the packages according to the configuration file requirements.txt.
+```
+$ pip install -r requirements.txt
+```
+The ```requirements.txt``` file shows various importable python modules needed to download.
 ```
 kaleido
 numpy
