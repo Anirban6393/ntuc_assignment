@@ -25,6 +25,7 @@ creating and deleting tables from external sql script instead of having to hardc
 
 
 # Main Running Scripts
+### Downloading
 download_files.py - Used for extracting zip files from website and unzipping them in **Data** folder. It invokes ```download.py```
 script from ```transformer``` module. User need to specify website name and files.
 
