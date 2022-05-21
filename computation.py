@@ -18,12 +18,18 @@ db_name='bank_info.db'
 os.chdir(".\sql")
 execute_external_sql_script_file('create_table.sql',db_name)
 
+ingest_data(customers,db_name, 'bank')
+
+pd.read_
+
 os.chdir("..")
 print('Display Marital Status by Jobs')
 print(pd.crosstab(customers.job, customers.marital,normalize='index')*100)
 
-customers['university_degree']=customers['education'].apply(lambda x: 'Yes' if x=='tertiary' else 'No')
 
+
+
+customers['university_degree']=customers['education'].apply(lambda x: 'Yes' if x=='tertiary' else 'No')
 
 fig1 = px.histogram(customers, x="age",title='Age Histogram Unfiltered')
 fig2 = px.histogram(customers, x="age", color="university_degree",title='Age Histogram Based On University Degree')
@@ -37,3 +43,4 @@ if not os.path.exists("images"):
 
 fig1.write_image("images/Age Histogram Unfiltered.png")
 fig2.write_image("images/Age Histogram Based On University Degree.png")
+
