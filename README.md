@@ -31,8 +31,9 @@ for iterating and unzipping.
 bank-additional.zip, bank.zip
 ```
 
-computation.py - processing logic for querying data and data visualisation. 
-It saves plotly image too in **Images** folder.
+computation.py - processing logic for querying data and data visualisation. <br />
+It saves plotly image too in **Images** folder. <br />
+It will also display a table that shows percentage breakdown of people for each occupation.
 
 
 ## Requirements File
