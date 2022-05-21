@@ -45,8 +45,3 @@ def ingest_data(dataframe,db_name, table):
     dataframe.to_sql(table, conn, if_exists='replace', index = False)
     
     
-    
-def query_data(query,db_name):    
-    # Connect to sqlite3 database.
-    conn = sqlite3.connect(db_name)    
-    pd.read_sql(query, conn)
