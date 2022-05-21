@@ -29,7 +29,7 @@ This user arguement advices user to provide multiple file names in a website whi
 for iterating and unzipping.
 
 ```
-bank-additional.zip, bank.zip
+bank-additional.zip,bank.zip
 ```
 
 ### Computation
