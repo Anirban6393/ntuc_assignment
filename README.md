@@ -38,7 +38,7 @@ computation.py - processing logic for querying data and data visualisation. <br 
 It saves plotly image too in **Images** folder. <br />
 It will also display a table that shows percentage breakdown of people for each occupation.
 
-Uses list comprehension to detect all csv files and append iteratively to single dataframe called **cutomers**.
+Uses list comprehension to detect all csv files and append iteratively to single dataframe called **customers**.
 ## Requirements File
 The following command will install the packages according to the configuration file requirements.txt.
 ```
