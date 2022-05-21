@@ -6,13 +6,6 @@ from transfomer.data_ingestion import *
 
 directory =os.chdir((os.getcwd()+'\\data'))
 
-def FileAppend(dr):
-    filenames = os.listdir(dr)
-    filenames=[file for file in filenames if file.endswith('.csv')]
-    df_from_each_file = (pd.read_csv(f,delimiter=';') for f in filenames)
-    customers = pd.concat(df_from_each_file, ignore_index=True,axis=0)
-    return customers
-
 customers = FileAppend(directory)
 
 
