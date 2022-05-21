@@ -1,7 +1,6 @@
 import os
-from download import *
+from transfomer.download import *
 
-os.chdir((os.getcwd()+'\\data'))
 
 if __name__ == "__main__":
     #specify website name
