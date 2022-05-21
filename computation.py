@@ -20,7 +20,6 @@ execute_external_sql_script_file('create_table.sql',db_name)
 
 ingest_data(customers,db_name, 'bank')
 
-pd.read_
 
 os.chdir("..")
 print('Display Marital Status by Jobs')
@@ -43,4 +42,3 @@ if not os.path.exists("images"):
 
 fig1.write_image("images/Age Histogram Unfiltered.png")
 fig2.write_image("images/Age Histogram Based On University Degree.png")
-
